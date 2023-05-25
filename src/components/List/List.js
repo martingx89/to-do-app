@@ -11,10 +11,8 @@ const List = () => {
     { id: 3, title: 'Games', icon: 'gamepad' },
   ]);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setColumns([...columns, { id: shortid(), title: value }]);
-    setValue('');
+  const addColumn = (newColumn) => {
+    setColumns([...columns, { id: shortid(), title: newColumn.title }]);
   };
 
   return (
@@ -30,7 +28,7 @@ const List = () => {
           <Column key={column.id} title={column.title} icon={column.icon} />
         ))}
       </section>
-      <ColumnForm handleSubmit={handleSubmit} />
+      <ColumnForm action={addColumn} />
     </div>
   );
 };

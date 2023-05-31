@@ -9,7 +9,7 @@ const SearchForm = () => {
   const [string, setString] = useState('');
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch({ type: 'UPDATE_SEARCHSTRING', payload: { string } });
+    dispatch({ type: 'UPDATE_SEARCHSTRING', payload: string });
   };
   return (
     <form className={styles.searchForm} onSubmit={handleSubmit}>

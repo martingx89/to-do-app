@@ -9,6 +9,10 @@
     font-family: $font-text;
     text-decoration: none;
   }
+
+  .linkActive {
+    color: $color-warning;
+  }
 }
 
 .container {

@@ -7,3 +7,5 @@ export const PageTitle = ({ children }) => {
     </div>
   );
 };
+
+export default PageTitle;

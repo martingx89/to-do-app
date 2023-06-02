@@ -30,6 +30,12 @@ const initialState = {
       title: 'Games',
       icon: 'gamepad',
     },
+    {
+      listId: 2,
+      id: 1,
+      title: 'Songs',
+      icon: 'music',
+    },
   ],
 
   cards: [

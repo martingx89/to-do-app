@@ -1,38 +1,38 @@
 const initialState = {
   lists: [
     {
-      id: 1,
+      id: '1',
       title: 'Things to do...',
       description: 'Interesting things I want to check out',
     },
     {
-      id: 2,
+      id: '2',
       title: 'Test list',
       description: 'Lorem Ipsum',
     },
   ],
   columns: [
     {
-      listId: 1,
-      id: 1,
+      listId: '1',
+      id: '1',
       title: 'Books',
       icon: 'book',
     },
     {
-      listId: 1,
-      id: 2,
+      listId: '1',
+      id: '2',
       title: 'Movies',
       icon: 'film',
     },
     {
-      listId: 1,
-      id: 3,
+      listId: '1',
+      id: '3',
       title: 'Games',
       icon: 'gamepad',
     },
     {
-      listId: 2,
-      id: 4,
+      listId: '2',
+      id: '4',
       title: 'Songs',
       icon: 'music',
     },

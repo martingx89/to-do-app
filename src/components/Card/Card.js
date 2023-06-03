@@ -1,23 +1,20 @@
 import styles from './Card.module.scss';
-import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
+import clsx from 'clsx';
+import { toggleCardFavorite } from '../../redux/store';
 
-const Card = ({ title, isFavorite }) => {
-  const cards = useSelector((state) => state.cards);
+const Card = ({ title, isFavorite, id }) => {
   const dispatch = useDispatch();
 
-  console.log(cards);
-
-  const handleStatus = (e) => {
-    e.preventDefault();
-    console.log('status');
-    dispatch({ type: 'TOGGLE_CARD_FAVORITE', payload: isFavorite });
+  const toggle = () => {
+    // e.preventDefault();
+    dispatch(toggleCardFavorite(id, isFavorite));
   };
 
   return (
     <li className={styles.card}>
       {title}
-      <button type='button' onClick={handleStatus}>
+      <button type='button' onClick={toggle}>
         fav
       </button>
     </li>

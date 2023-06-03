@@ -9,7 +9,6 @@ const List = () => {
   const { listId } = useParams();
   // const columns = useSelector(getAllColumns);
   const listData = useSelector((state) => getListById(state, listId));
-  console.log(listData);
   const columns = useSelector((state) => getColumnsByList(state, listId));
 
   return (

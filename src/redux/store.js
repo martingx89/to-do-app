@@ -11,6 +11,10 @@ export const getFilteredCards = ({ cards, searchString }, columnId) =>
 //   return state.columns;
 // };
 
+export const getAllLists = ({ lists }) => {
+  return lists;
+};
+
 export const getListById = ({ lists }, listId) => {
   return lists.find((list) => list.id === listId);
 };

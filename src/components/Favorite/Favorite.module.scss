@@ -1,9 +1,35 @@
+@use 'sass:math';
 @import '../../styles/settings.scss';
 
-.subtitle {
+.hero {
+  padding: $base-size;
+}
+
+.favorite_subtitle {
   padding: ($base-size * 2) 0;
+  font-size: 15px;
   text-align: center;
-  font-size: ($base-size * 2);
-  font-style: italic;
-  font-weight: normal;
+}
+
+.favorite {
+  padding: $base-size;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &:last-child {
+    margin: 0 0 $base-size 0;
+  }
+}
+
+.cards {
+  padding: math.div($base-size, 2) 0;
+  flex-shrink: 0;
+  width: calc(33% - 12px);
+  background: $color-light;
+  margin-top: 30px;
+  padding: ($base-size * 1.5);
+  border-radius: $radius;
+  box-shadow: 0 math.div($base-size, 4) 0 rgba(0, 0, 0, 0.3);
+  color: $color-dark;
 }

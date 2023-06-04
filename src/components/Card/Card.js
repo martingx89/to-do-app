@@ -3,19 +3,21 @@ import { useDispatch } from 'react-redux';
 import clsx from 'clsx';
 import { toggleCardFavorite } from '../../redux/store';
 
-const Card = ({ title, isFavorite, id }) => {
+const Card = (props) => {
   const dispatch = useDispatch();
 
-  const toggle = () => {
-    // e.preventDefault();
-    dispatch(toggleCardFavorite(id, isFavorite));
+  const cardId = props.cardId;
+
+  const toggle = (e) => {
+    e.preventDefault();
+    dispatch(toggleCardFavorite(cardId));
   };
 
   return (
     <li className={styles.card}>
-      {title}
-      <button type='button' onClick={toggle}>
-        fav
+      {props.title}
+      <button onClick={toggle}>
+        <span className={clsx('fa fa-star-o', props.isFavourite && styles.isFavourite)} />
       </button>
     </li>
   );

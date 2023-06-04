@@ -10,4 +10,14 @@
   display: flex;
   justify-content: space-between;
   font-weight: bold;
+
+  button {
+    border: medium;
+    background-color: transparent;
+    cursor: pointer;
+
+    span.isFavourite {
+      color: gold;
+    }
+  }
 }

@@ -17,7 +17,7 @@ const Card = (props) => {
     <li className={styles.card}>
       {props.title}
       <button onClick={toggle}>
-        <span className={clsx('fa fa-star-o', props.isFavourite && styles.isFavourite)} />
+        <span className={clsx('fa fa-star-o', props.isFavorite && styles.isFavorite)}></span>
       </button>
     </li>
   );

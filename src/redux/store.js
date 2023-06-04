@@ -22,6 +22,10 @@ export const getColumnsByList = ({ columns }, listId) => {
   return columns.filter((column) => column.listId === listId);
 };
 
+export const getFliteredFavoriteCards = (state) => {
+  return state.cards.filter((card) => card.isFavorite === true);
+};
+
 // action creators
 export const addColumn = (payload) => ({ type: 'ADD_COLUMN', payload });
 export const addCard = (payload) => ({ type: 'ADD_CARD', payload });

@@ -21,10 +21,14 @@ const Card = (props) => {
   return (
     <li className={styles.card}>
       {props.title}
-      <button onClick={toggle}>
-        <span className={clsx('fa fa-star-o', props.isFavorite && styles.isFavorite)}></span>
-      </button>
-      <button onClick={remove}>rem</button>
+      <div>
+        <button onClick={toggle}>
+          <span className={clsx('fa fa-star-o', props.isFavorite && styles.isFavorite)}></span>
+        </button>
+        <button className={styles.remove_button} onClick={remove}>
+          <span className='fa fa-trash' />
+        </button>
+      </div>
     </li>
   );
 };

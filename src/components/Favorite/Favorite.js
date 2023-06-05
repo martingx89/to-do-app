@@ -6,7 +6,6 @@ import { getFliteredFavoriteCards } from '../../redux/cardsRedux';
 
 export const Favorite = () => {
   const favCards = useSelector(getFliteredFavoriteCards);
-  console.log(favCards);
 
   if (favCards.length !== 0) {
     return (
